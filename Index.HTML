@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lach & Liam | Unisex Luxury Salon Coimbatore</title>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CRITICAL STYLES - These work even if Tailwind script fails */
+        :root {
+            --gold: #D4AF37;
+            --gold-bright: #FFD700;
+            --black: #0a0a0a;
+        }
+        
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            background-color: var(--black); 
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .serif { font-family: 'Playfair Display', serif; }
+        
+        /* Vibrant Gold Styling */
+        .gold-text { color: var(--gold) !important; }
+        .vibrant-gold { 
+            color: var(--gold-bright) !important;
+            text-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+        }
+        .gold-bg { background-color: var(--gold) !important; color: #000 !important; }
+        .gold-border { border: 1px solid var(--gold) !important; }
+
+        /* Hero Section Fixes */
+        .hero-container {
+            position: relative;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: #000;
+        }
+
+        .hero-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.5;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            padding: 0 20px;
+        }
+
+        /* Animations */
+        .reveal {
+            animation: revealUp 1s cubic-bezier(0.2, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes revealUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Nav Glass Effect */
+        .nav-glass {
+            background: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        /* Mobile Fixes */
+        @media (max-width: 768px) {
+            .hero-title { font-size: 3.5rem !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="flex items-center justify-between px-6 md:px-16 py-5 sticky top-0 z-50 nav-glass">
+        <div class="text-xl md:text-2xl serif gold-text tracking-[0.2em] font-bold uppercase cursor-pointer">
+            Lach & Liam
+        </div>
+        
+        <div class="hidden lg:flex space-x-10 text-[10px] uppercase tracking-[0.2em] font-bold">
+            <a href="#services" class="hover:text-[#D4AF37] transition-all">Services</a>
+            <a href="#offers" class="hover:text-[#D4AF37] transition-all">Offers</a>
+            <a href="#locate" class="hover:text-[#D4AF37] transition-all">Locate Us</a>
+            <a href="#about" class="hover:text-[#D4AF37] transition-all">About Us</a>
+        </div>
+
+        <button onclick="toggleBooking()" class="gold-bg px-6 py-2 md:px-8 md:py-3 text-[10px] font-bold uppercase tracking-widest hover:brightness-110 transition-all shadow-lg">
+            Book Appointment
+        </button>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero-container">
+        <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=2069&auto=format&fit=crop" 
+             class="hero-image" alt="Lach & Liam Luxury">
+        
+        <div class="hero-content reveal">
+            <p class="text-white tracking-[0.5em] uppercase text-[10px] md:text-xs mb-4 font-bold bg-black/50 inline-block px-4 py-1 rounded">
+                Luxury Unleashed in Coimbatore
+            </p>
+            
+            <h1 class="hero-title text-6xl md:text-9xl serif mb-6 italic leading-tight vibrant-gold">
+                Lach & Liam
+            </h1>
+            
+            <p class="max-w-2xl mx-auto text-white font-bold tracking-[0.15em] text-xs md:text-sm mb-10 uppercase leading-loose drop-shadow-2xl">
+                Unisex Luxury Salon • Peelamedu • Artistry in Every Detail
+            </p>
+            
+            <div class="flex flex-col md:flex-row justify-center gap-6">
+                <a href="#services" class="gold-bg px-12 py-4 text-[10px] font-bold uppercase tracking-widest shadow-2xl hover:scale-105 transition-transform">
+                    Our Signature Services
+                </a>
+                <a href="#locate" class="border border-white/50 text-white px-12 py-4 text-[10px] font-bold uppercase tracking-widest hover:border-gold hover:text-gold transition-all">
+                    Find the Studio
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-24 px-6 md:px-16 bg-[#050505]">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16">
+                <h2 class="text-4xl serif gold-text mb-4">The Craft</h2>
+                <div class="w-20 h-[2px] gold-bg mb-4"></div>
+                <p class="text-gray-500 uppercase tracking-widest text-[10px]">Couture Cuts • Global Color • Premium Grooming</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Hair -->
+                <div class="border border-white/5 p-8 bg-[#0a0a0a] hover:border-[#D4AF37]/30 transition-all">
+                    <div class="h-60 mb-6 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=500&auto=format&fit=crop" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                    </div>
+                    <h3 class="text-xl serif mb-3 gold-text">Hair Couture</h3>
+                    <p class="text-gray-500 text-xs leading-relaxed">Master stylists creating silhouettes that define your unique personality.</p>
+                </div>
+                <!-- Color -->
+                <div class="border border-white/5 p-8 bg-[#0a0a0a] hover:border-[#D4AF37]/30 transition-all">
+                    <div class="h-60 mb-6 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?q=80&w=500&auto=format&fit=crop" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                    </div>
+                    <h3 class="text-xl serif mb-3 gold-text">Bespoke Color</h3>
+                    <p class="text-gray-500 text-xs leading-relaxed">Revolutionary coloring techniques using world-class professional pigments.</p>
+                </div>
+                <!-- Rituals -->
+                <div class="border border-white/5 p-8 bg-[#0a0a0a] hover:border-[#D4AF37]/30 transition-all">
+                    <div class="h-60 mb-6 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=500&auto=format&fit=crop" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                    </div>
+                    <h3 class="text-xl serif mb-3 gold-text">Rituals & Spa</h3>
+                    <p class="text-gray-500 text-xs leading-relaxed">Rejuvenating scalp therapies designed for a complete sensory escape.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OFFERS -->
+    <section id="offers" class="bg-[#0f0f0f] py-20 px-6 text-center border-y border-gold/10">
+        <h2 class="serif text-3xl gold-text mb-6">Current Exclusives</h2>
+        <p class="text-gray-400 text-[10px] uppercase tracking-widest mb-10">Peelamedu studio opening specials</p>
+        <div class="flex justify-center gap-4 flex-wrap">
+            <div class="bg-black p-6 border border-gold/20 min-w-[250px]">
+                <p class="gold-text font-bold text-lg mb-1">First Visit Ritual</p>
+                <p class="text-gray-500 text-[10px] uppercase">Introductory Privilege</p>
+            </div>
+            <div class="bg-black p-6 border border-gold/20 min-w-[250px]">
+                <p class="gold-text font-bold text-lg mb-1">Signature Club</p>
+                <p class="text-gray-500 text-[10px] uppercase">Annual Memberships</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT & LOCATE -->
+    <section id="about" class="py-24 px-6 md:px-16">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-5xl serif mb-8 italic">Lach & Liam</h2>
+                <p class="text-gray-400 text-sm leading-loose mb-10 font-light">
+                    Located in the hub of Peelamedu, Coimbatore, Lach & Liam is a sanctuary of style. We redefine the unisex salon experience by blending international fashion trends with bespoke care.
+                </p>
+                
+                <div id="locate" class="pt-8 border-t border-white/10">
+                    <h4 class="gold-text text-xs tracking-widest uppercase mb-4 font-bold">Location</h4>
+                    <p class="text-white text-sm mb-1 font-semibold">Peelamedu Flagship</p>
+                    <p class="text-gray-500 text-xs mb-8 leading-loose">
+                        No 16, Bharathi Colony main road,<br>
+                        Peelamedu, Coimbatore, TN-641004.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <p class="text-[9px] text-gray-500 uppercase mb-2">Concierge</p>
+                            <p class="text-xs gold-text font-bold">72003 76106</p>
+                            <p class="text-xs gold-text font-bold">73584 60248</p>
+                        </div>
+                        <div>
+                            <p class="text-[9px] text-gray-500 uppercase mb-2">Email</p>
+                            <p class="text-xs text-white">lachliam23@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="absolute -inset-2 border border-gold/20"></div>
+                <img src="https://images.unsplash.com/photo-1522337621169-d6309bbbb94a?q=80&w=800&auto=format&fit=crop" class="w-full grayscale brightness-75">
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-16 px-6 bg-black border-t border-white/5 text-center">
+        <div class="text-xl serif gold-text tracking-[0.4em] font-bold uppercase mb-8">Lach & Liam</div>
+        <div class="flex justify-center gap-8 text-[10px] uppercase font-bold tracking-widest mb-10">
+            <a href="https://www.instagram.com/LACHANDLIAM_PEELAMEDU" target="_blank" class="text-gray-500 hover:text-gold transition-colors">Instagram</a>
+            <a href="https://wa.me/917200376106" target="_blank" class="text-gray-500 hover:text-gold transition-colors">WhatsApp</a>
+            <a href="mailto:lachliam23@gmail.com" class="text-gray-500 hover:text-gold transition-colors">Email</a>
+        </div>
+        <p class="text-[8px] text-gray-800 tracking-[0.3em]">© 2026 LACH & LIAM UNISEX LUXURY SALON. COIMBATORE.</p>
+    </footer>
+
+    <!-- BOOKING MODAL -->
+    <div id="bookingModal" class="fixed inset-0 z-[60] hidden flex items-center justify-center px-4 bg-black/90">
+        <div class="glass w-full max-w-md p-10 text-center relative">
+            <button onclick="toggleBooking()" class="absolute top-4 right-4 text-white/50 hover:text-white">✕</button>
+            <h3 class="serif text-2xl gold-text mb-4">Request a Ritual</h3>
+            <p class="text-gray-400 text-[10px] uppercase tracking-widest mb-8">Peelamedu Appointment</p>
+            
+            <form id="appointmentForm" class="space-y-4 text-left">
+                <input type="text" placeholder="Your Name" class="w-full bg-white/5 border border-white/10 px-4 py-3 text-xs text-white focus:outline-none focus:border-gold">
+                <input type="tel" placeholder="Phone Number" class="w-full bg-white/5 border border-white/10 px-4 py-3 text-xs text-white focus:outline-none focus:border-gold">
+                <input type="date" class="w-full bg-white/5 border border-white/10 px-4 py-3 text-xs text-white focus:outline-none focus:border-gold">
+                <button type="button" onclick="submitRequest()" class="w-full gold-bg py-4 text-[10px] font-bold uppercase tracking-widest mt-4">Confirm Request</button>
+            </form>
+            <div id="successMsg" class="hidden py-8">
+                <p class="gold-text serif text-xl mb-2">Thank You</p>
+                <p class="text-gray-400 text-xs">Our concierge will contact you shortly.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleBooking() {
+            const modal = document.getElementById('bookingModal');
+            modal.classList.toggle('hidden');
+        }
+
+        function submitRequest() {
+            document.getElementById('appointmentForm').classList.add('hidden');
+            document.getElementById('successMsg').classList.remove('hidden');
+            setTimeout(() => {
+                toggleBooking();
+                setTimeout(() => {
+                    document.getElementById('appointmentForm').classList.remove('hidden');
+                    document.getElementById('successMsg').classList.add('hidden');
+                }, 500);
+            }, 3000);
+        }
+    </script>
+
+</body>
+</html>
